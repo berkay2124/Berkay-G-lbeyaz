@@ -1,46 +1,15 @@
-# Berkay-G-lbeyaz
+# Basic Sample Hardhat Project
 
-pragma solidity >=0.5.12<=0.8.0;
+This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
 
-contract NftContract
-{
-    
-  class NftMarket { Pending, Shipped, Delivered }
+Try running some of the following tasks:
 
-
-    NftMarket private status;
-
- event LogNewAlert(string description);
-    constructor() public {
-        status = NftMarket.Pending;
-    }
-
-    function Shipped() public {
-        status = ShippingStatus.Shipped;
-        emit LogNewAlert("Your package has been shipped");
-    }
-
-
-    function Delivered() public {
-        status = ShippingStatus.Delivered;
-        emit LogNewAlert("Your package has arrived");
-    }
-
-    function getStatus(ShippingStatus _status) internal pure returns (string memory) {
-
-     if (NftMarket.Pending == _status) return "Pending";
-     if (NftMarket.Shipped == _status) return "Shipped";
-     if (NftMarket.Delivered == _status) return "Delivered";
-    }
-
-
-    function Status() public view returns (string memory) {
-         NftMarket_status = status;
-         return getStatus(_status);
-    }
-
-}
-const Shipping = artifacts.require("Shipping");
-module.exports = function (deployer) {
-  deployer.deploy(Shipping);
-};
+```shell
+npx hardhat accounts
+npx hardhat compile
+npx hardhat clean
+npx hardhat test
+npx hardhat node
+node scripts/sample-script.js
+npx hardhat help
+```
