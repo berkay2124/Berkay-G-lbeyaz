@@ -1,5 +1,5 @@
 # Berkay-G-lbeyaz
-#Acıkhack2022
+
 pragma solidity >=0.5.12<=0.8.0;
 
 contract NftContract
